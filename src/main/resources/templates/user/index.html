@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:with="activeMenu='home',userRole='user'">
+
+<head>
+<div th:replace="fragments/layout :: head"></div>
+<title>Accueil utilisateur - Flybook</title>
+</head>
+
+<body>
+<!-- Sidebar -->
+<div th:replace="fragments/layout :: sidebar"></div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Header -->
+    <div th:replace="fragments/layout :: header"></div>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h2 class="page-title">
+                <i class="bi bi-house-door me-2"></i>
+                Accueil Utilisateur
+            </h2>
+            <p class="page-subtitle">Bienvenue sur votre espace personnel Flybook</p>
+        </div>
+
+        <!-- User Dashboard Content -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-clock-history me-2"></i>
+                            Mes dernières réservations
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle me-2"></i>
+                            Vous n'avez aucune réservation récente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div th:replace="fragments/layout :: footer"></div>
+</div>
+
+<!-- Scripts -->
+<div th:replace="fragments/layout :: scripts"></div>
+</body>
+
+</html>
